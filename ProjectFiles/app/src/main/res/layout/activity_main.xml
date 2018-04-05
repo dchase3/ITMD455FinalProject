@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    //following line will be different on each computer make use you add yours
+    //and comment out the others on your computer.
+    //tools:context="com.example.densi.itmd455finalproject.MainActivity">
+
+</android.support.constraint.ConstraintLayout>
