@@ -1,5 +1,4 @@
-package com.example.densi.itmd455finalproject;
-//package com.example.ssiruuk.itmd455finalproject;
+package com.example.devonald.itmd455finalproject;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -14,6 +13,10 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+/**
+ * Created by Devonald on 4/22/2018.
+ */
 
 public class display extends Activity {
 
@@ -101,3 +104,4 @@ public class display extends Activity {
         });
     }
 }
+
