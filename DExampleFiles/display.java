@@ -1,4 +1,4 @@
-package com.example.devonald.finalproject;
+package com.example.devonald.itmd455finalproject;
 
 import android.app.Activity;
 import android.os.Bundle;
