@@ -1,4 +1,8 @@
-package com.example.raiven.itmd455final;
+//first package will be different on each computer make use you add yours
+//and comment out the others on your computer.
+package com.example.densi.itmd455finalproject;
+//package com.example.ssiruuk.itmd455finalproject;
+//package com.example.raiven.itmd455final;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,10 +11,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.TextView;
-
-/**
- * Created by Raiven on 4/27/2018.
- */
 
 public class singular_student_display extends Activity {
     TextView name;
