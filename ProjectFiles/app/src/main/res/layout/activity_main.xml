@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.densi.itmd455finalproject.MainActivity">
 
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="106dp"
@@ -39,7 +40,7 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="436dp"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="45dp"
         android:layout_marginStart="45dp"
@@ -53,7 +54,7 @@
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="435dp"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="42dp"
         android:layout_marginEnd="45dp"
@@ -62,13 +63,13 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/badbehavior"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/badbehavior"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="225dp"
@@ -78,5 +79,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
-
 </android.support.constraint.ConstraintLayout>

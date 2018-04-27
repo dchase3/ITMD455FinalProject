@@ -2,6 +2,7 @@
 //and comment out the others on your computer.
 package com.example.densi.itmd455finalproject;
 //package com.example.ssiruuk.itmd455finalproject;
+//package com.example.raiven.itmd455final;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         username = (EditText)findViewById(R.id.editText);
         password = (EditText)findViewById(R.id.editText2);
-        submit = findViewById(R.id.button);
+        submit = findViewById(R.id.badbehavior);
         submit.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -33,19 +34,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    /*
-        @Override
-        public void onClick(View view) {
-            if (validate()){
-                Toast.makeText(MainActivity.this, "Success..!", Toast.LENGTH_LONG)
-                        .show();
-                /*String str = username.getText().toString();
-                Intent i = new Intent(MainActivity.this, display.class);
-                i.putExtra("Username", str);
-                startActivity(i);
-            }
-        }
-    */
+
     public boolean validate() {
         //simple test to see if fields were populated
         if (username.getText().toString().trim().length()<=0){
