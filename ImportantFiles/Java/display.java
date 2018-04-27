@@ -1,7 +1,9 @@
-package com.example.devonald.itmd455finalproject;
+package com.example.raiven.itmd455final;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
@@ -20,37 +22,17 @@ import java.util.List;
 
 public class display extends Activity {
 
+
+
+    /*   String ListItemsName2[] = new String[]{ "Indian Rupee",
+               "Pakistani Rupee",
+               "Sri Lankan Rupee",
+               "Renminbi"};
+
+      */
+
     TextView textView;
-    String ListItemsName[] = new String[]{ "India",
-            "Pakistan",
-            "Sri Lanka",
-            "China",
-            "Bangladesh",
-            "Nepal",
-            "Afghanistan",
-            "North Korea",
-            "South Korea",
-            "Japan"};
-    int ImageName[] = new int[]{ R.drawable.india,
-            R.drawable.paki,
-            R.drawable.sril,
-            R.drawable.china,
-            R.drawable.bang,
-            R.drawable.nepal,
-            R.drawable.afg,
-            R.drawable.nk,
-            R.drawable.sk,
-            R.drawable.jap};
-    String ListItemsName2[] = new String[]{ "Indian Rupee",
-            "Pakistani Rupee",
-            "Sri Lankan Rupee",
-            "Renminbi",
-            "Bangladeshi Taka",
-            "Nepalese Rupee",
-            "Afghani",
-            "North Korean Won",
-            "South Korean Won",
-            "Japanese Yen"};
+    List<student> list;
     ListView listView;
     SimpleAdapter listAdapter;
 
@@ -65,14 +47,27 @@ public class display extends Activity {
 
         listView = (ListView)findViewById(R.id.students);
 
+        SqlHelper db = new SqlHelper(this);
+        Log.d("Name:", "Raiven Johnson");
+
+        db.addStudent(new student("Darez Phillips"));
+        db.addStudent(new student("Raiven Johnson"));
+        db.addStudent(new student("Dennis Chase"));
+        db.addStudent(new student("Devonald Manney"));
+        db.addStudent(new student("Peisong Huang"));
+
+        list = db.getAllBooks();
+
+
+
         // Each row in the list stores country name, currency and flag
         List<HashMap<String,String>> aList = new ArrayList<HashMap<String,String>>();
 
-        for(int i=0;i<10;i++){
+        for(int i=0;i<list.size();i++){
             HashMap<String, String> hm = new HashMap<String,String>();
-            hm.put("txt", "Country : " + ListItemsName[i]);
-            hm.put("cur","Currency : " + ListItemsName2[i]);
-            hm.put("flag", Integer.toString(ImageName[i]) );
+            hm.put("txt", "Country : " + list.get(i).getName());
+      //      hm.put("cur","Currency : " + ListItemsName2[i]);
+
             aList.add(hm);
         }
 
@@ -97,11 +92,13 @@ public class display extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Toast.makeText(getApplicationContext(),
-                        ListItemsName[position],
-                        Toast.LENGTH_LONG).show();
+
+                String str = list.get(position).getName();
+                Intent i = new Intent(display.this, singular_student_display.class);
+                i.putExtra("name", str);
+                startActivity(i);
+
             }
         });
     }
 }
-

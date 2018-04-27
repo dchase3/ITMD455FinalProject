@@ -1,4 +1,4 @@
-package com.example.devonald.itmd455finalproject;
+package com.example.raiven.itmd455final;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         username = (EditText)findViewById(R.id.editText);
         password = (EditText)findViewById(R.id.editText2);
-        submit = findViewById(R.id.button);
+        submit = findViewById(R.id.badbehavior);
         submit.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
