@@ -17,11 +17,11 @@
         android:text="Student Name"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/usernameDisp"
+        app:layout_constraintStart_toEndOf="@+id/behaveDisp"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/usernameDisp"
+        android:id="@+id/behaveDisp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -42,7 +42,7 @@
         android:text="Location"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usernameDisp" />
+        app:layout_constraintTop_toBottomOf="@+id/behaveDisp" />
 
     <RadioButton
         android:id="@+id/radioButton"
@@ -96,7 +96,7 @@
         app:layout_constraintTop_toBottomOf="@+id/radioButton4" />
 
     <RadioButton
-        android:id="@+id/radioButton5"
+        android:id="@+id/teacherButton"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
@@ -106,36 +106,39 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <RadioButton
-        android:id="@+id/radioButton6"
+        android:id="@+id/adminButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="Administration"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton5" />
+        app:layout_constraintTop_toBottomOf="@+id/teacherButton" />
 
     <RadioButton
-        android:id="@+id/radioButton7"
+        android:id="@+id/peersButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="Peers"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton6" />
+        app:layout_constraintTop_toBottomOf="@+id/adminButton" />
 
     <Button
-        android:id="@+id/button19"
+        android:id="@+id/add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="128dp"
         android:text="Add Behavior"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="131dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/additional"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
@@ -143,9 +146,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="Additional Comments ..."
-        app:layout_constraintBottom_toTopOf="@+id/button19"
+        app:layout_constraintBottom_toTopOf="@+id/add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton7" />
+        app:layout_constraintTop_toBottomOf="@+id/peersButton" />
 
 </android.support.constraint.ConstraintLayout>

@@ -15,7 +15,7 @@
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/usernameDisp"
+        android:id="@+id/behaveDisp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView2"
@@ -29,12 +29,12 @@
         android:id="@+id/students"
         android:layout_width="match_parent"
         android:layout_height="375dp"
-        android:layout_alignEnd="@+id/usernameDisp"
+        android:layout_alignEnd="@+id/behaveDisp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView2" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/textView2"
@@ -43,11 +43,11 @@
         android:text="Add Student" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/remove"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button2"
-        android:layout_alignBottom="@+id/button2"
+        android:layout_alignBaseline="@+id/add"
+        android:layout_alignBottom="@+id/add"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="13dp"
         android:text="Remove Student" />
