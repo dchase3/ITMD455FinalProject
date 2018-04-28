@@ -1,8 +1,5 @@
-//first package will be different on each computer make use you add yours
-//and comment out the others on your computer.
-package com.example.densi.itmd455finalproject;
-//package com.example.ssiruuk.itmd455finalproject;
-//package com.example.raiven.itmd455final;
+package com.example.raiven.itmd455final;
+
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,11 +7,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,19 +28,20 @@ public class display extends Activity {
                "Pakistani Rupee",
                "Sri Lankan Rupee",
                "Renminbi"};
-
       */
 
     TextView textView;
     List<student> list;
     ListView listView;
     SimpleAdapter listAdapter;
+    Button add;
+    Button remove;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.display);
-        textView = (TextView)findViewById(R.id.usernameDisp);
+        textView = (TextView)findViewById(R.id.behaveDisp);
 
         String username = getIntent().getStringExtra("Username");
         textView.setText(username);
@@ -70,7 +67,7 @@ public class display extends Activity {
         for(int i=0;i<list.size();i++){
             HashMap<String, String> hm = new HashMap<String,String>();
             hm.put("txt", "Country : " + list.get(i).getName());
-      //      hm.put("cur","Currency : " + ListItemsName2[i]);
+            //      hm.put("cur","Currency : " + ListItemsName2[i]);
 
             aList.add(hm);
         }
@@ -104,5 +101,25 @@ public class display extends Activity {
 
             }
         });
+
+        add = (Button)findViewById(R.id.add);
+        add.setOnClickListener(new View.OnClickListener(){
+            @Override public void onClick(View v) {
+
+                Intent i = new Intent(getApplicationContext(), add_student.class);
+                startActivity(i);
+            }
+        });
+
+        remove = (Button)findViewById(R.id.remove);
+        remove.setOnClickListener(new View.OnClickListener(){
+            @Override public void onClick(View v) {
+
+                Intent i = new Intent(getApplicationContext(), add_student.class);
+                startActivity(i);
+            }
+        });
+
+
     }
 }
