@@ -23,10 +23,10 @@ public class behavior {
         details="Repeatedly using the F word";
         action="Sent in hall way plus verbal warning";
     }
-    public behavior(int id, String date, String conduct, String details, String action)
+    public behavior(int bid,int id, String date, String conduct, String details, String action)
     {
         super();
-        behaviorId++;
+        behaviorId=bid;
         this.studentId=id;
         this.date=date;
         this.conduct=conduct;

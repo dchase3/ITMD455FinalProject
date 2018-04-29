@@ -24,25 +24,24 @@ public class MainActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                String str = username.getText().toString();
-                Intent i = new Intent(MainActivity.this, display.class);
-                i.putExtra("Username", str);
-                startActivity(i);
+                String user = username.getText().toString();
+                String pass = password.getText().toString();
+                if(validate(user,pass)==true) {
+                    Intent i = new Intent(MainActivity.this, display.class);
+                    startActivity(i);
+                }
             }
         });
     }
 
-    public boolean validate() {
+    public boolean validate(String username, String password) {
         //simple test to see if fields were populated
-        if (username.getText().toString().trim().length()<=0){
-            Toast.makeText(MainActivity.this, "Please Enter a valid username",
-                    Toast.LENGTH_LONG).show();
+        if ((username.equals("admin"))&&(password.equals("admin"))){
             return true;
-        } else if (password.getText().toString().trim().length()<=0){
-            Toast.makeText(MainActivity.this, "Please enter a valid password",
-                    Toast.LENGTH_LONG).show();
-            return true;
+        } else {
+            Toast.makeText(MainActivity.this, "Invalid credentials",
+                Toast.LENGTH_LONG).show();
+            return false;
         }
-        return false;
     }
 }

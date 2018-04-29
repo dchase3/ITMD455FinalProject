@@ -1,6 +1,5 @@
 package com.example.raiven.itmd455final;
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,10 +15,10 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * Created by Devonald on 4/22/2018.
+ * Created by Raiven on 4/29/2018.
  */
 
-public class display extends Activity {
+public class delete_display extends Activity {
 
     TextView textView;
     List<student> list;
@@ -27,25 +26,13 @@ public class display extends Activity {
     SimpleAdapter listAdapter;
     Button add;
     Button remove;
+    SqlHelper db = new SqlHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.display);
-        textView = (TextView)findViewById(R.id.behaveDisp);
-
-
+        setContentView(R.layout.delete_display);
         listView = (ListView)findViewById(R.id.students);
-
-        SqlHelper db = new SqlHelper(this);
-
-        //only execute the addStudent lines the first time you run the program
-        //otherwise your table with populate the same values everytime you run it
-   //     db.addStudent(new student("Darez Phillips"));
-    //    db.addStudent(new student("Raiven Johnson"));
-    //    db.addStudent(new student("Dennis Chase"));
-     //   db.addStudent(new student("Devonald Manney"));
-      //  db.addStudent(new student("Peisong Huang"));
 
         list = db.getAllStudents();
 
@@ -62,7 +49,7 @@ public class display extends Activity {
         }
 
         // Keys used in Hashmap
-        String[] from = { "txt","cur" };
+        String[] from = {"txt"};
 
         // Ids of views in listview_layout
         int[] to = {R.id.txt};
@@ -86,9 +73,8 @@ public class display extends Activity {
                 //passes student name and student id to the next activity
                 String str = list.get(position).getName();
                 int sid = list.get(position).getId();
-                Intent i = new Intent(display.this, singular_student_display.class);
-                i.putExtra("name", str);
-                i.putExtra("id", sid);
+                Intent i = new Intent(getApplicationContext(), display.class);
+                db.deleteStudent(sid);
                 startActivity(i);
 
             }
@@ -108,7 +94,7 @@ public class display extends Activity {
         remove.setOnClickListener(new View.OnClickListener(){
             @Override public void onClick(View v) {
 
-                Intent i = new Intent(getApplicationContext(), delete_display.class);
+                Intent i = new Intent(getApplicationContext(), add_student.class);
                 startActivity(i);
             }
         });

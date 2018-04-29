@@ -19,17 +19,23 @@ public class singular_student_display extends Activity {
     TextView name;
     Button good;
     Button bad;
-    ArrayList<String> behaviors;
+    Button stats;
+    int sid;
+    ArrayList<behavior> behaviors= new ArrayList<behavior>();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.singular_student_display);
+        SqlHelper db = new SqlHelper(this);
+
         name = (TextView)findViewById(R.id.studentname);
 
         String student = getIntent().getStringExtra("name");
-   //     behaviors = getIntent().getStringArrayListExtra("behavior");
+        sid = getIntent().getIntExtra("id",0);
+
+
         name.setText(student);
 
         good = (Button)findViewById(R.id.goodbehvaior);
@@ -41,6 +47,7 @@ public class singular_student_display extends Activity {
             @Override public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), goodbehaviors.class);
                 intent.putExtra("name", name.getText());
+                intent.putExtra("id", sid);
                 startActivity(intent);
             }
         });
@@ -49,20 +56,34 @@ public class singular_student_display extends Activity {
             @Override public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), badbehaviors.class);
                 intent.putExtra("name", name.getText());
+                intent.putExtra("id", sid);
                 startActivity(intent);
             }
         });
 
+/*        stats.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), stats.class);
+                intent.putExtra("name", name.getText());
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+*/
+        behaviors=db.getStudentBehaviors(sid);
         List<HashMap<String,String>> aList = new ArrayList<HashMap<String,String>>();
-/*
-        for(int i=0;i<list.size();i++){
+
+        for(int j=0;j<behaviors.size();j++){
             HashMap<String, String> hm = new HashMap<String,String>();
-            hm.put("txt", "Country : " + list.get(i).getName());
+            hm.put("date",  behaviors.get(j).getDate());
+            hm.put("conduct", behaviors.get(j).getConduct());
+            hm.put("details", behaviors.get(j).getDetails());
+            hm.put("action", behaviors.get(j).getAction());
             //      hm.put("cur","Currency : " + ListItemsName2[i]);
 
             aList.add(hm);
         }
-*/
+
         // Keys used in Hashmap
         String[] from = { "date","conduct","details", "action" };
 

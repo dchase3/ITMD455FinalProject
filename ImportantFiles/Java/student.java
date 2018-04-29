@@ -3,19 +3,20 @@ package com.example.raiven.itmd455final;
 
 public class student {
 
-    private int id;
+    static int counter = 1;
+    int id=0;
     private String name;
 
     public student()
     {
-        id++;
+        id=counter++;
         name="Stacey Adams";
     }
     public student(String name)
     {
         super();
         this.name=name;
-        id++;
+        id=counter++;
     }
 
     public int getId() {
