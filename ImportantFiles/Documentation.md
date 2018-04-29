@@ -529,6 +529,8 @@ Includes the XML files and code as well as screenshots of layout files.
 
 ### activity_main.xml
 
+![Figure1](https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/figure1.png)
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -622,6 +624,8 @@ Includes the XML files and code as well as screenshots of layout files.
 
 ### add_student.xml
 
+![Figure2](https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/figure2.png)
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
@@ -675,6 +679,8 @@ Includes the XML files and code as well as screenshots of layout files.
 ```
 
 ### badbehaviors.xml
+
+![Figure3](https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/figure3.png)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -930,6 +936,8 @@ Includes the XML files and code as well as screenshots of layout files.
 
 ### behaviortracking.xml
 
+![Figure4](https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/figure4.png)
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -1108,6 +1116,8 @@ Includes the XML files and code as well as screenshots of layout files.
 
 ### display.xml
 
+![Figure5](https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/figure5.png)
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -1175,6 +1185,8 @@ Includes the XML files and code as well as screenshots of layout files.
 
 ### displaystudents.xml
 
+![Figure6](https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/figure6.png)
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -1217,6 +1229,8 @@ Includes the XML files and code as well as screenshots of layout files.
 ```
 
 ### goodbehaviors.xml
+
+![Figure7](https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/figure7.png)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -1459,6 +1473,8 @@ Includes the XML files and code as well as screenshots of layout files.
 
 ### singular_student_display.xml
 
+![Figure8](https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/figure8.png)
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -1529,6 +1545,8 @@ Includes the XML files and code as well as screenshots of layout files.
 ```
 
 ### singular_student_display_list.xml
+
+![Figure9](https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/figure9.png)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
