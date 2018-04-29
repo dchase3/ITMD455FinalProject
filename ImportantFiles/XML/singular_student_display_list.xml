@@ -4,8 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#1e1e1e">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textView3"
@@ -14,7 +13,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:text="Date:"
-        android:textColor="#00b0ca"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,7 +24,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:text="Error N/A"
-        android:textColor="#00b0ca"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,7 +35,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Conduct:"
-        android:textColor="#00b0ca"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -50,7 +46,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Error N/A"
-        android:textColor="#00b0ca"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/date" />
@@ -62,7 +57,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Details:"
-        android:textColor="#00b0ca"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -74,7 +68,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Error N/A"
-        android:textColor="#00b0ca"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -86,7 +79,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Action Taken:"
-        android:textColor="#00b0ca"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
@@ -98,7 +90,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Error N/A"
-        android:textColor="#00b0ca"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintStart_toEndOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/details" />
