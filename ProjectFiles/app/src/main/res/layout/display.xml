@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#1e1e1e">
 
     <TextView
         android:id="@+id/textView2"
@@ -12,6 +13,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="13dp"
         android:text="Student Name"
+        android:textColor="#00b0ca"
         android:textSize="16sp" />
 
     <TextView
@@ -23,6 +25,7 @@
         android:layout_marginStart="13dp"
         android:layout_toEndOf="@+id/textView2"
         android:text="TextView"
+        android:textColor="#00b0ca"
         android:textSize="16sp" />
 
     <ListView
@@ -40,6 +43,8 @@
         android:layout_alignStart="@+id/textView2"
         android:layout_below="@+id/students"
         android:layout_marginTop="19dp"
+        android:background="#00b0ca"
+        android:textColor="#1e1e1e"
         android:text="Add Student" />
 
     <Button
@@ -50,6 +55,8 @@
         android:layout_alignBottom="@+id/button2"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="13dp"
+        android:background="#00b0ca"
+        android:textColor="#1e1e1e"
         android:text="Remove Student" />
 
 </RelativeLayout>

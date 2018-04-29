@@ -5,6 +5,7 @@
     android:id="@+id/relativeLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1e1e1e"
     tools:layout_editor_absoluteY="81dp">
 
     <TextView
@@ -15,6 +16,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Student Name"
+        android:textColor="#00b0ca"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/usernameDisp"
@@ -27,6 +29,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:textColor="#00b0ca"
         android:text="Behavior Name:"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         app:layout_constraintEnd_toStartOf="@+id/studentDisp"
@@ -40,6 +43,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:text="Location"
+        android:textColor="#00b0ca"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usernameDisp" />
@@ -51,6 +55,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="Classroom"
+        android:textColor="#00b0ca"
+        android:buttonTint="#00b0ca"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -61,6 +67,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="Hallway"
+        android:textColor="#00b0ca"
+        android:buttonTint="#00b0ca"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioButton" />
 
@@ -71,6 +79,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="Bus"
+        android:textColor="#00b0ca"
+        android:buttonTint="#00b0ca"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
 
@@ -81,6 +91,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="Cafeteria"
+        android:textColor="#00b0ca"
+        android:buttonTint="#00b0ca"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
 
@@ -89,6 +101,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:textColor="#00b0ca"
         android:layout_marginTop="8dp"
         android:text="Faculty/Staff Present"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
@@ -102,6 +115,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="Teacher"
+        android:textColor="#00b0ca"
+        android:buttonTint="#00b0ca"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -112,6 +127,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="Administration"
+        android:textColor="#00b0ca"
+        android:buttonTint="#00b0ca"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioButton5" />
 
@@ -122,6 +139,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="Peers"
+        android:textColor="#00b0ca"
+        android:buttonTint="#00b0ca"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioButton6" />
 
@@ -131,6 +150,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="Add Behavior"
+        android:textColor="#1e1e1e"
+        android:background="#00b0ca"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="131dp" />
 
@@ -139,6 +160,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
+        android:textColor="#00b0ca"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"

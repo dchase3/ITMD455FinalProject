@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#1e1e1e">
 
     <Button
         android:id="@+id/button1"
@@ -15,6 +16,8 @@
         android:layout_marginTop="16dp"
         android:text="Classwork Incomplete"
         android:textSize="10sp"
+        android:background="#00b0ca"
+        android:textColor="#1e1e1e"
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,6 +32,8 @@
         android:layout_marginTop="16dp"
         android:text="Disrespectful"
         android:textSize="10sp"
+        android:background="#00b0ca"
+        android:textColor="#1e1e1e"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button1"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -42,6 +47,8 @@
         android:layout_marginTop="4dp"
         android:text="Distracts Others"
         android:textSize="10sp"
+        android:background="#00b0ca"
+        android:textColor="#1e1e1e"
         app:layout_constraintEnd_toStartOf="@+id/button4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button1" />
@@ -55,6 +62,8 @@
         android:layout_marginTop="4dp"
         android:text="Interrupter"
         android:textSize="10sp"
+        android:background="#00b0ca"
+        android:textColor="#1e1e1e"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
@@ -68,6 +77,8 @@
         android:layout_marginTop="4dp"
         android:text="Late"
         android:textSize="10sp"
+        android:background="#00b0ca"
+        android:textColor="#1e1e1e"
         app:layout_constraintEnd_toStartOf="@+id/button6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
@@ -81,6 +92,8 @@
         android:layout_marginTop="4dp"
         android:text="No Break Return"
         android:textSize="10sp"
+        android:background="#00b0ca"
+        android:textColor="#1e1e1e"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button5"
         app:layout_constraintTop_toBottomOf="@+id/button4" />
@@ -94,6 +107,8 @@
         android:layout_marginTop="4dp"
         android:text="Left during instruction"
         android:textSize="10sp"
+        android:background="#00b0ca"
+        android:textColor="#1e1e1e"
         app:layout_constraintEnd_toStartOf="@+id/button8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button5" />
@@ -107,6 +122,8 @@
         android:layout_marginTop="4dp"
         android:text="Unorganized Space"
         android:textSize="10sp"
+        android:background="#00b0ca"
+        android:textColor="#1e1e1e"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button7"
         app:layout_constraintTop_toBottomOf="@+id/button6" />
@@ -120,6 +137,8 @@
         android:layout_marginTop="4dp"
         android:text="No Homework"
         android:textSize="10sp"
+        android:background="#00b0ca"
+        android:textColor="#1e1e1e"
         app:layout_constraintEnd_toStartOf="@+id/button10"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button7" />
@@ -133,6 +152,8 @@
         android:layout_marginTop="4dp"
         android:text="Non-Participation"
         android:textSize="10sp"
+        android:background="#00b0ca"
+        android:textColor="#1e1e1e"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button9"
         app:layout_constraintTop_toBottomOf="@+id/button8" />
@@ -146,6 +167,8 @@
         android:layout_marginTop="4dp"
         android:text="Unable to follow directions"
         android:textSize="10sp"
+        android:background="#00b0ca"
+        android:textColor="#1e1e1e"
         app:layout_constraintEnd_toStartOf="@+id/button12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button9" />
@@ -159,6 +182,8 @@
         android:layout_marginTop="4dp"
         android:text="Off Task"
         android:textSize="10sp"
+        android:background="#00b0ca"
+        android:textColor="#1e1e1e"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button11"
         app:layout_constraintTop_toBottomOf="@+id/button10" />
@@ -172,6 +197,8 @@
         android:layout_marginTop="4dp"
         android:text="Out of Chair"
         android:textSize="10sp"
+        android:background="#00b0ca"
+        android:textColor="#1e1e1e"
         app:layout_constraintEnd_toStartOf="@+id/button14"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button11" />
@@ -185,6 +212,8 @@
         android:layout_marginTop="4dp"
         android:text="Unprepared"
         android:textSize="10sp"
+        android:background="#00b0ca"
+        android:textColor="#1e1e1e"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button13"
         app:layout_constraintTop_toBottomOf="@+id/button12" />
@@ -199,6 +228,8 @@
         android:layout_marginTop="8dp"
         android:text="Add Your Own"
         android:textSize="12sp"
+        android:background="#00b0ca"
+        android:textColor="#1e1e1e"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -210,6 +241,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Bad Behavior"
+        android:textColor="#00b0ca"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

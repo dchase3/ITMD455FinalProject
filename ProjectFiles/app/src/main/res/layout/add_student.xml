@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#1e1e1e">
 
     <TextView
         android:id="@+id/textView6"
@@ -13,6 +14,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Add Student Name:"
+        android:textColor="#00b0ca"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,6 +26,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:textColor="#00b0ca"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -35,9 +38,12 @@
         android:layout_marginBottom="18dp"
         android:layout_marginEnd="149dp"
         android:layout_marginStart="147dp"
+        android:background="#00b0ca"
         android:text="Submit"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#1e1e1e"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
