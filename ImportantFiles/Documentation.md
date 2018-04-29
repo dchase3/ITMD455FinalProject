@@ -24,6 +24,10 @@ This documentation contains all source code, layout screens and snapshots of the
   - [singular_student_display](#singular_student_display.java)
   - [SqlHelper](#sqlhelper.java)
   - [student](#student.java)
+  - [add_student](#add_student.java)
+  - [behaviors](#behaviors.java)
+  - [delete_display](#delete_display.java)
+  - [stats](#stats.java)
 - [XML Code](#xml-code)
   - [activity_main](#activity_main.xml)
   - [add_student](#add_student.xml)
@@ -78,26 +82,25 @@ public class MainActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                String str = username.getText().toString();
-                Intent i = new Intent(MainActivity.this, display.class);
-                i.putExtra("Username", str);
-                startActivity(i);
+                String user = username.getText().toString();
+                String pass = password.getText().toString();
+                if(validate(user,pass)==true) {
+                    Intent i = new Intent(MainActivity.this, display.class);
+                    startActivity(i);
+                }
             }
         });
     }
 
-    public boolean validate() {
+    public boolean validate(String username, String password) {
         //simple test to see if fields were populated
-        if (username.getText().toString().trim().length()<=0){
-            Toast.makeText(MainActivity.this, "Please Enter a valid username",
-                    Toast.LENGTH_LONG).show();
+        if ((username.equals("admin"))&&(password.equals("admin"))){
             return true;
-        } else if (password.getText().toString().trim().length()<=0){
-            Toast.makeText(MainActivity.this, "Please enter a valid password",
-                    Toast.LENGTH_LONG).show();
-            return true;
+        } else {
+            Toast.makeText(MainActivity.this, "Invalid credentials",
+                Toast.LENGTH_LONG).show();
+            return false;
         }
-        return false;
     }
 }
 ```
@@ -118,26 +121,184 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+
 
 public class badbehaviors extends Activity {
-    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7,btn8,btn9,btn10,bt11,btn12,bt13,btn14,bt15;
+    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15;
+    String student;
+    int sid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.badbehaviors);
 
-        String student = getIntent().getStringExtra("name");
+        student = getIntent().getStringExtra("name");
+        sid = getIntent().getIntExtra("id",0);
 
-        btn1 = (Button)findViewById(R.id.badbehavior);
+        btn1 = (Button)findViewById(R.id.button1);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
                 intent.putExtra("behavior", btn1.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
                 startActivity(intent);
             }
         });
 
+        btn2 = (Button)findViewById(R.id.button2);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn2.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn3 = (Button)findViewById(R.id.button3);
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn3.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn4 = (Button)findViewById(R.id.button4);
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn4.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn5 = (Button)findViewById(R.id.button5);
+        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn5.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn6 = (Button)findViewById(R.id.button6);
+        btn6.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn6.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn7 = (Button)findViewById(R.id.button7);
+        btn7.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn7.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn8 = (Button)findViewById(R.id.button8);
+        btn8.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn8.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn9 = (Button)findViewById(R.id.button9);
+        btn9.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn9.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn10 = (Button)findViewById(R.id.button10);
+        btn10.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn10.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn11 = (Button)findViewById(R.id.button11);
+        btn11.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn11.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn12 = (Button)findViewById(R.id.button12);
+        btn12.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn12.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn13 = (Button)findViewById(R.id.button13);
+        btn13.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn13.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn14 = (Button)findViewById(R.id.add);
+        btn14.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn14.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn15 = (Button)findViewById(R.id.button15);
+        btn15.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn15.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
 
     }
 }
@@ -152,7 +313,176 @@ package com.example.densi.itmd455finalproject;
 //package com.example.ssiruuk.itmd455finalproject;
 //package com.example.raiven.itmd455final;
 
-public class behaviortracking {
+import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+
+/**
+ * Created by Raiven on 4/27/2018.
+ */
+
+public class behaviortracking extends Activity {
+    String student;
+    String behavior;
+    String date;
+    String details;
+    String action;
+    int sid;
+
+    TextView behaviorDisplay;
+    TextView studentDisplay;
+    EditText additional;
+    EditText act;
+
+    Button add;
+    ArrayList<String> dets = new ArrayList<String>();
+    SqlHelper db = new SqlHelper(this);
+    private ArrayList<behavior> behaviors = new ArrayList<>();
+
+    private static final String TAG = "BehaviorTracking";
+
+    private TextView mDisplayDate;
+    private DatePickerDialog.OnDateSetListener mDateSetListener;
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.behaviortracking);
+
+
+        mDisplayDate = (TextView) findViewById(R.id.tvDate);
+        behaviorDisplay=(TextView)findViewById(R.id.behaveDisp);
+        studentDisplay=(TextView)findViewById(R.id.studentDisp);
+        additional=(EditText)findViewById(R.id.additional);
+        add=(Button)findViewById(R.id.button2);
+        act=(EditText)findViewById(R.id.action);
+
+        behavior = getIntent().getStringExtra("behavior");
+        student = getIntent().getStringExtra("name");
+        sid = getIntent().getIntExtra("id",0);
+   //     behaviorid=getIntent().getIntExtra("behavior_id");
+
+
+        behaviorDisplay.setText(behavior);
+        studentDisplay.setText(student);
+
+        RadioGroup rGroup = (RadioGroup)findViewById(R.id.radioGroup);
+        // This will get the radiobutton in the radiogroup that is checked
+        RadioButton checkedRadioButton = (RadioButton)rGroup.findViewById(rGroup.getCheckedRadioButtonId());
+    // This overrides the radiogroup onCheckListener
+        rGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        {
+            public void onCheckedChanged(RadioGroup group, int checkedId)
+            {
+                // This will get the radiobutton that has changed in its check state
+                RadioButton checkedRadioButton = (RadioButton)group.findViewById(checkedId);
+                // This puts the value (true/false) into the variable
+                boolean isChecked = checkedRadioButton.isChecked();
+                // If the radiobutton that has changed in check state is now checked...
+                if (isChecked)
+                {
+                    // Changes the textview's text to "Checked: example radiobutton text"
+                    dets.add("Location : "+checkedRadioButton.getText().toString());
+                }
+            }
+        });
+
+
+        RadioButton tb = (RadioButton) findViewById(R.id.teacherButton);
+        tb.setOnClickListener(new View.OnClickListener(){
+            @Override public void onClick(View v) {
+                dets.add("teacher present");
+            }
+        });
+
+        RadioButton pb = (RadioButton) findViewById(R.id.peersButton);
+        pb.setOnClickListener(new View.OnClickListener(){
+            @Override public void onClick(View v) {
+                dets.add("peers present");
+            }
+        });
+
+        RadioButton ab = (RadioButton) findViewById(R.id.adminButton);
+        ab.setOnClickListener(new View.OnClickListener(){
+            @Override public void onClick(View v) {
+                dets.add("admin present");
+            }
+        });
+
+
+        add.setOnClickListener(new View.OnClickListener(){
+            @Override public void onClick(View v) {
+
+                StringBuilder details = new StringBuilder();
+                for (String s : dets)
+                {
+                    details.append(s);
+                    details.append(",\t");
+                }
+
+                details.append(additional.getText().toString());
+                action=act.getText().toString();
+
+                Intent i = new Intent(getApplicationContext(), singular_student_display.class);
+                i.putExtra("name", student);
+                db.addBehaviors(new behavior(1,sid,date,behavior,details.toString(),action));
+
+                startActivity(i);
+            }
+        });
+
+
+
+        mDisplayDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Calendar cal = Calendar.getInstance();
+                int year = cal.get(Calendar.YEAR);
+                int month = cal.get(Calendar.MONTH);
+                int day = cal.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog dialog = new DatePickerDialog(
+                        behaviortracking.this, android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+                        mDateSetListener, year, month, day); //when dialog open set to today's date
+
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); //make background transparent
+                dialog.show();
+            }
+        });
+
+        mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                month = month + 1;
+                Log.d(TAG, "onDateset: mm/dd/yyyy: " + month + "/" + day + "/" + year);
+
+                date = month + "/" + day + "/" + year;
+                mDisplayDate.setText(date);
+
+            }
+        };
+
+
+
+    }
+
+
 }
 ```
 
@@ -170,14 +500,12 @@ package com.example.densi.itmd455finalproject;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -189,60 +517,51 @@ import java.util.List;
 
 public class display extends Activity {
 
-
-
-    /*   String ListItemsName2[] = new String[]{ "Indian Rupee",
-               "Pakistani Rupee",
-               "Sri Lankan Rupee",
-               "Renminbi"};
-
-      */
-
     TextView textView;
     List<student> list;
     ListView listView;
     SimpleAdapter listAdapter;
+    Button add;
+    Button remove;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.display);
-        textView = (TextView)findViewById(R.id.usernameDisp);
+        textView = (TextView)findViewById(R.id.behaveDisp);
 
-        String username = getIntent().getStringExtra("Username");
-        textView.setText(username);
 
         listView = (ListView)findViewById(R.id.students);
 
         SqlHelper db = new SqlHelper(this);
-        Log.d("Name:", "Raiven Johnson");
 
-        db.addStudent(new student("Darez Phillips"));
-        db.addStudent(new student("Raiven Johnson"));
-        db.addStudent(new student("Dennis Chase"));
-        db.addStudent(new student("Devonald Manney"));
-        db.addStudent(new student("Peisong Huang"));
+        //only execute the addStudent lines the first time you run the program
+        //otherwise your table with populate the same values everytime you run it
+   //     db.addStudent(new student("Darez Phillips"));
+    //    db.addStudent(new student("Raiven Johnson"));
+    //    db.addStudent(new student("Dennis Chase"));
+     //   db.addStudent(new student("Devonald Manney"));
+      //  db.addStudent(new student("Peisong Huang"));
 
-        list = db.getAllBooks();
+        list = db.getAllStudents();
 
 
 
-        // Each row in the list stores country name, currency and flag
         List<HashMap<String,String>> aList = new ArrayList<HashMap<String,String>>();
 
+        //populates hashmap with names of the students in the database
         for(int i=0;i<list.size();i++){
             HashMap<String, String> hm = new HashMap<String,String>();
-            hm.put("txt", "Country : " + list.get(i).getName());
-      //      hm.put("cur","Currency : " + ListItemsName2[i]);
+            hm.put("txt", list.get(i).getName());
 
             aList.add(hm);
         }
 
         // Keys used in Hashmap
-        String[] from = { "flag","txt","cur" };
+        String[] from = { "txt","cur" };
 
         // Ids of views in listview_layout
-        int[] to = { R.id.flag,R.id.txt,R.id.cur};
+        int[] to = {R.id.txt};
 
         // Instantiating an adapter to store each items
         // R.layout.listview_layout defines the layout of each item
@@ -260,13 +579,37 @@ public class display extends Activity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
+                //passes student name and student id to the next activity
                 String str = list.get(position).getName();
+                int sid = list.get(position).getId();
                 Intent i = new Intent(display.this, singular_student_display.class);
                 i.putExtra("name", str);
+                i.putExtra("id", sid);
                 startActivity(i);
 
             }
         });
+
+        //leads to screen to add a new student
+        add = (Button)findViewById(R.id.button2);
+        add.setOnClickListener(new View.OnClickListener(){
+            @Override public void onClick(View v) {
+
+                Intent i = new Intent(getApplicationContext(), add_student.class);
+                startActivity(i);
+            }
+        });
+
+        remove = (Button)findViewById(R.id.button3);
+        remove.setOnClickListener(new View.OnClickListener(){
+            @Override public void onClick(View v) {
+
+                Intent i = new Intent(getApplicationContext(), delete_display.class);
+                startActivity(i);
+            }
+        });
+
+
     }
 }
 ```
@@ -283,16 +626,165 @@ package com.example.densi.itmd455finalproject;
 //package com.example.raiven.itmd455final;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class goodbehaviors extends Activity {
-
+    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7,btn8,btn9,btn10,btn11,btn12,btn13;
+    String student;
+    int sid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.goodbehaviors);
 
-        String student = getIntent().getStringExtra("name");
+        student = getIntent().getStringExtra("name");
+        sid = getIntent().getIntExtra("id",0);
+
+        btn1 = (Button)findViewById(R.id.button1);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn1.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn2 = (Button)findViewById(R.id.button2);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn2.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn3 = (Button)findViewById(R.id.button3);
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn3.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn4 = (Button)findViewById(R.id.button4);
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn4.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn5 = (Button)findViewById(R.id.button5);
+        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn5.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn6 = (Button)findViewById(R.id.button6);
+        btn6.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn6.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn7 = (Button)findViewById(R.id.button7);
+        btn7.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn7.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn8 = (Button)findViewById(R.id.button8);
+        btn8.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn8.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn9 = (Button)findViewById(R.id.button9);
+        btn9.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn9.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn10 = (Button)findViewById(R.id.button10);
+        btn10.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn10.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn11 = (Button)findViewById(R.id.button11);
+        btn11.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn11.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn12 = (Button)findViewById(R.id.button12);
+        btn12.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn12.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+
+        btn13 = (Button)findViewById(R.id.button13);
+        btn13.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), behaviortracking.class);
+                intent.putExtra("behavior", btn13.getText());
+                intent.putExtra("name", student);
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
     }
 }
 ```
@@ -314,21 +806,36 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class singular_student_display extends Activity {
     TextView name;
     Button good;
     Button bad;
+    Button stats;
+    int sid;
+    ArrayList<behavior> behaviors= new ArrayList<behavior>();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.singular_student_display);
+        SqlHelper db = new SqlHelper(this);
+
         name = (TextView)findViewById(R.id.studentname);
 
         String student = getIntent().getStringExtra("name");
+        sid = getIntent().getIntExtra("id",0);
+
+
         name.setText(student);
 
         good = (Button)findViewById(R.id.goodbehvaior);
@@ -340,6 +847,7 @@ public class singular_student_display extends Activity {
             @Override public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), goodbehaviors.class);
                 intent.putExtra("name", name.getText());
+                intent.putExtra("id", sid);
                 startActivity(intent);
             }
         });
@@ -348,9 +856,50 @@ public class singular_student_display extends Activity {
             @Override public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), badbehaviors.class);
                 intent.putExtra("name", name.getText());
+                intent.putExtra("id", sid);
                 startActivity(intent);
             }
         });
+
+/*        stats.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), stats.class);
+                intent.putExtra("name", name.getText());
+                intent.putExtra("id", sid);
+                startActivity(intent);
+            }
+        });
+*/
+        behaviors=db.getStudentBehaviors(sid);
+        List<HashMap<String,String>> aList = new ArrayList<HashMap<String,String>>();
+
+        for(int j=0;j<behaviors.size();j++){
+            HashMap<String, String> hm = new HashMap<String,String>();
+            hm.put("date",  behaviors.get(j).getDate());
+            hm.put("conduct", behaviors.get(j).getConduct());
+            hm.put("details", behaviors.get(j).getDetails());
+            hm.put("action", behaviors.get(j).getAction());
+            //      hm.put("cur","Currency : " + ListItemsName2[i]);
+
+            aList.add(hm);
+        }
+
+        // Keys used in Hashmap
+        String[] from = { "date","conduct","details", "action" };
+
+        // Ids of views in listview_layout
+        int[] to = { R.id.date,R.id.conduct,R.id.details, R.id.action};
+
+        // Instantiating an adapter to store each items
+        // R.layout.listview_layout defines the layout of each item
+        SimpleAdapter adapter = new SimpleAdapter(getBaseContext(), aList, R.layout.singular_student_display_list, from, to);
+
+        // Getting a reference to listview of main.xml layout file
+        ListView listView = ( ListView ) findViewById(R.id.behaviorlist);
+
+        // Setting the adapter to the listView
+        listView.setAdapter(adapter);
+
 
 
 
@@ -375,18 +924,28 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteQueryBuilder;
 import android.util.Log;
-
 import java.util.ArrayList;
 
 public class SqlHelper extends SQLiteOpenHelper {
 
-    private static final String DATABASE_NAME = "DBStudents";
+    private static final String DATABASE_NAME = "DB6";
     //   private static final int DATABASE_VERSION = 16;
     public static final String TABLE_STUDENTS = "students";
+    public static final String TABLE_BEHAVIORS = "behaviors";
 
+    // columns for students table
     private static final String TABLE_NAME = "name";
     private static final String TABLE_ID = "id";
+
+    //columns for behaviors table
+    private static final String TABLE_BID = "behavior_id";
+    private static final String TABLE_SID = "student_id";
+    private static final String TABLE_DATE = "date";
+    private static final String TABLE_CONDUCT = "conduct";
+    private static final String TABLE_DETAILS = "details";
+    private static final String TABLE_ACTION = "action_taken";
 
     public SqlHelper(Context context)
     {
@@ -397,11 +956,14 @@ public class SqlHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         Log.d("Table create", "table being built");
         sqLiteDatabase.execSQL("CREATE TABLE students ( id INTEGER, name TEXT)");
+        sqLiteDatabase.execSQL("CREATE TABLE behaviors ( behavior_id INTEGER, student_id INTEGER, date TEXT, conduct TEXT, details TEXT, action_taken TEXT )");
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int il) {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS students");
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS behaviors");
         this.onCreate(sqLiteDatabase);
     }
 
@@ -422,9 +984,33 @@ public class SqlHelper extends SQLiteOpenHelper {
         sqLiteDatabase.close();
     }
 
-    public ArrayList<student> getAllBooks()
+
+    public void addBehaviors(behavior behavior)
     {
-        ArrayList<student> books = new ArrayList<>();
+        Log.d("Added behaviors:", behavior.toString());
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put(TABLE_BID, behavior.getBehaviorId());
+        cv.put(TABLE_SID, behavior.getStudentId());
+        cv.put(TABLE_DATE, behavior.getDate());
+        cv.put(TABLE_CONDUCT, behavior.getConduct());
+        cv.put(TABLE_DETAILS, behavior.getDetails());
+        cv.put(TABLE_ACTION, behavior.getAction());
+
+
+        Log.d("Track", "attempting insert");
+        sqLiteDatabase.insert(TABLE_BEHAVIORS, null, cv);
+
+        sqLiteDatabase.close();
+    }
+
+
+
+    public ArrayList<student> getAllStudents()
+    {
+        ArrayList<student> students = new ArrayList<>();
 
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cur = sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_STUDENTS, null);
@@ -437,13 +1023,43 @@ public class SqlHelper extends SQLiteOpenHelper {
                 s = new student();
                 s.setId(Integer.parseInt(cur.getString(0)));
                 s.setName(cur.getString(1));
-                books.add(s);
+                students.add(s);
             }
             while (cur.moveToNext());
         }
-        Log.d("Checking all books:", books.toString());
-        return books;
+        Log.d("Checking all students:", students.toString());
+        return students;
     }
+
+
+    public ArrayList<behavior> getBehaviors()
+    {
+        ArrayList<behavior> behaviors = new ArrayList<>();
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cur = sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_BEHAVIORS, null);
+
+        behavior b = null;
+        if (cur.moveToFirst())
+        {
+            do
+            {
+                b = new behavior();
+                b.setBehaviorId(Integer.parseInt(cur.getString(0)));
+                b.setStudentId(Integer.parseInt(cur.getString(1)));
+                b.setDate(cur.getString(2));
+                b.setConduct(cur.getString(3));
+                b.setDetails(cur.getString(4));
+                b.setAction(cur.getString(5));
+                behaviors.add(b);
+            }
+            while (cur.moveToNext());
+        }
+        Log.d("Checking behaviors:", behaviors.toString());
+        return behaviors;
+    }
+
+
 
     public int updateStudent(student student)
     {
@@ -453,20 +1069,81 @@ public class SqlHelper extends SQLiteOpenHelper {
         cv.put(TABLE_ID, student.getId());
         cv.put(TABLE_NAME, student.getName());
 
-        int i = sqLiteDatabase.update(TABLE_STUDENTS, cv, TABLE_NAME + " = ?", new String[] {String.valueOf(student.getId())});
+        int i = sqLiteDatabase.update(TABLE_STUDENTS, cv, TABLE_ID+ " = ?", new String[] {String.valueOf(student.getId())});
 
         sqLiteDatabase.close();
         Log.d("Updating book:", student.toString());
         return i;
     }
 
-    public void deleteStudent(student student)
+
+    public int updateBehavior(behavior behavior)
     {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        sqLiteDatabase.delete(TABLE_STUDENTS, TABLE_NAME + " = ?", new String[] {String.valueOf(student.getId())});
+        ContentValues cv = new ContentValues();
+
+        cv.put(TABLE_BID, behavior.getBehaviorId());
+        cv.put(TABLE_SID, behavior.getStudentId());
+        cv.put(TABLE_DATE, behavior.getDate());
+        cv.put(TABLE_CONDUCT, behavior.getConduct());
+        cv.put(TABLE_DETAILS, behavior.getDetails());
+        cv.put(TABLE_ACTION, behavior.getAction());
+
+        int i = sqLiteDatabase.update(TABLE_BEHAVIORS, cv, TABLE_BID + " = ?", new String[] {String.valueOf(behavior.getBehaviorId())});
 
         sqLiteDatabase.close();
-        Log.d("Deleted book:", student.toString());
+        Log.d("Updating behavior:", behavior.toString());
+        return i;
+    }
+
+
+    public void deleteStudent(int id)
+    {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        sqLiteDatabase.delete(TABLE_STUDENTS, TABLE_ID + " = ?", new String[] {String.valueOf(id)});
+
+        sqLiteDatabase.close();
+    }
+
+    public void deleteBehavior(behavior behavior)
+    {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        sqLiteDatabase.delete(TABLE_BEHAVIORS, TABLE_BID + " = ?", new String[] {String.valueOf(behavior.getBehaviorId())});
+
+        sqLiteDatabase.close();
+        Log.d("Deleted behavior:", behavior.toString());
+    }
+
+    public ArrayList<behavior> getStudentBehaviors(int id)
+    {
+        ArrayList<behavior> behaviors = new ArrayList<>();
+        String whereclause=" WHERE "+ TABLE_SID + " = ? ";
+        String[] values={String.valueOf(id)};
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cur = sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_BEHAVIORS + whereclause, new String[] {String.valueOf(id)});
+
+        behavior b = null;
+        if (cur.moveToFirst())
+        {
+            do
+            {
+                b = new behavior();
+                b.setBehaviorId(Integer.parseInt(cur.getString(0)));
+                Log.d("bid",cur.getString(0));
+                b.setStudentId(Integer.parseInt(cur.getString(1)));
+                Log.d("sid",cur.getString(1));
+                b.setDate(cur.getString(2));
+                Log.d("date",cur.getString(2));
+                b.setConduct(cur.getString(3));
+                Log.d("date",cur.getString(3));
+                b.setDetails(cur.getString(4));
+                b.setAction(cur.getString(5));
+                behaviors.add(b);
+            }
+            while (cur.moveToNext());
+        }
+        Log.d("Checking behaviors:", behaviors.toString());
+        return behaviors;
     }
 }
 ```
@@ -521,6 +1198,297 @@ public class student {
     }
 }
 ```
+
+### add_student.java
+
+added object student to the database.
+
+```java
+package com.example.raiven.itmd455final;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+
+/**
+ * Created by Raiven on 4/27/2018.
+ */
+
+public class add_student extends Activity {
+    EditText name;
+    Button submit;
+    String student;
+    SqlHelper db = new SqlHelper(this);
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.add_student);
+        submit = (Button) findViewById(R.id.addStudentButton);
+        name = (EditText) findViewById(R.id.addStudentName);
+
+        //on click sends entered name to be inserted in the database
+        submit.setOnClickListener(new View.OnClickListener(){
+            @Override public void onClick(View v) {
+                student=name.getText().toString();
+                Intent i = new Intent(getApplicationContext(), display.class);
+                db.addStudent(new student(student));
+                startActivity(i);
+            }
+        });
+
+    }
+}
+```
+
+### behavior.java
+
+```java
+package com.example.raiven.itmd455final;
+
+/**
+ * Created by Raiven on 4/28/2018.
+ */
+
+
+public class behavior {
+
+    private int behaviorId;
+    private int studentId;
+    private String date;
+    private String conduct;
+    private String details;
+    private String action;
+
+    public behavior()
+    {
+        behaviorId++;
+        studentId=3;
+        date="1/21/18";
+        conduct="Blurting";
+        details="Repeatedly using the F word";
+        action="Sent in hall way plus verbal warning";
+    }
+    public behavior(int bid,int id, String date, String conduct, String details, String action)
+    {
+        super();
+        behaviorId=bid;
+        this.studentId=id;
+        this.date=date;
+        this.conduct=conduct;
+        this.details= details;
+        this.action=action;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String d) {
+        date = d;
+    }
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(int i) {
+        studentId = i;
+    }
+
+    public int getBehaviorId() {  return behaviorId; }
+
+    public void setBehaviorId(int i) {
+        behaviorId = i;
+    }
+
+    public String getConduct() {
+        return conduct;
+    }
+
+    public void setConduct (String c) {
+        conduct = c;
+    }
+
+    public String getDetails() {
+        return details;
+    }
+
+    public void setDetails(String d) {
+        details = d;
+    }
+
+
+    public String getAction() {
+        return action;
+    }
+
+    public void setAction(String a) {
+        action = a;
+    }
+
+
+    public String toString()
+    {
+        return "bId : " + behaviorId + "\tsid: " + studentId+"\tconduct : " + conduct + "\tdetails: " + details+"\tdate : " + date + "\taction taken: " + action;
+    }
+}
+```
+
+### delete_display.java
+
+```java
+package com.example.raiven.itmd455final;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+/**
+ * Created by Raiven on 4/29/2018.
+ */
+
+public class delete_display extends Activity {
+
+    TextView textView;
+    List<student> list;
+    ListView listView;
+    SimpleAdapter listAdapter;
+    Button add;
+    Button remove;
+    SqlHelper db = new SqlHelper(this);
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.delete_display);
+        listView = (ListView)findViewById(R.id.students);
+
+        list = db.getAllStudents();
+
+
+
+        List<HashMap<String,String>> aList = new ArrayList<HashMap<String,String>>();
+
+        //populates hashmap with names of the students in the database
+        for(int i=0;i<list.size();i++){
+            HashMap<String, String> hm = new HashMap<String,String>();
+            hm.put("txt", list.get(i).getName());
+
+            aList.add(hm);
+        }
+
+        // Keys used in Hashmap
+        String[] from = {"txt"};
+
+        // Ids of views in listview_layout
+        int[] to = {R.id.txt};
+
+        // Instantiating an adapter to store each items
+        // R.layout.listview_layout defines the layout of each item
+        SimpleAdapter adapter = new SimpleAdapter(getBaseContext(), aList, R.layout.displaystudents, from, to);
+
+        // Getting a reference to listview of main.xml layout file
+        ListView listView = ( ListView ) findViewById(R.id.students);
+
+        // Setting the adapter to the listView
+        listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+
+                //passes student name and student id to the next activity
+                String str = list.get(position).getName();
+                int sid = list.get(position).getId();
+                Intent i = new Intent(getApplicationContext(), display.class);
+                db.deleteStudent(sid);
+                startActivity(i);
+
+            }
+        });
+
+        //leads to screen to add a new student
+        add = (Button)findViewById(R.id.button2);
+        add.setOnClickListener(new View.OnClickListener(){
+            @Override public void onClick(View v) {
+
+                Intent i = new Intent(getApplicationContext(), add_student.class);
+                startActivity(i);
+            }
+        });
+
+        remove = (Button)findViewById(R.id.button3);
+        remove.setOnClickListener(new View.OnClickListener(){
+            @Override public void onClick(View v) {
+
+                Intent i = new Intent(getApplicationContext(), add_student.class);
+                startActivity(i);
+            }
+        });
+
+
+    }
+}
+```
+
+### stats.java
+
+```java
+package com.example.raiven.itmd455final;
+
+import android.app.Activity;
+import android.os.Bundle;
+/*
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
+
+/**
+ * Created by Raiven on 4/29/2018.
+ */
+
+public class stats extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.stats);
+
+/*
+        GraphView graph = (GraphView) findViewById(R.id.graph);
+        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[]{
+                new DataPoint(0, 1),
+                new DataPoint(1, 5),
+                new DataPoint(2, 3)
+        });
+        graph.addSeries(series);
+*/
+    }
+
+}
+```
+
 
 
 ## XML Code
@@ -1655,6 +2623,7 @@ Includes the XML files and code as well as screenshots of layout files.
         app:layout_constraintTop_toBottomOf="@+id/details" />
 </android.support.constraint.ConstraintLayout>
 ```
+
 
 
 ## Screenshots
