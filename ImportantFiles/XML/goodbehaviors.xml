@@ -21,7 +21,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <Button
-        android:id="@+id/add"
+        android:id="@+id/button2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -34,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button1" />
 
     <Button
-        android:id="@+id/remove"
+        android:id="@+id/button3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -44,7 +44,7 @@
         android:textSize="10sp"
         app:layout_constraintEnd_toStartOf="@+id/button11"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add" />
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <Button
         android:id="@+id/button4"
@@ -57,7 +57,7 @@
         android:textSize="10sp"
         app:layout_constraintEnd_toStartOf="@+id/button12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/remove" />
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 
     <Button
         android:id="@+id/button5"
@@ -134,7 +134,7 @@
         android:text="On Time"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/add"
+        app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/button9" />
 
     <Button
@@ -147,7 +147,7 @@
         android:text="Participation"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/remove"
+        app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/button10" />
 
     <Button
@@ -177,7 +177,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button12" />
 
     <Button
-        android:id="@+id/button14"
+        android:id="@+id/add"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"

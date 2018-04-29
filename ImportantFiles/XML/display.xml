@@ -7,23 +7,12 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="13dp"
-        android:text="Student Name"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/behaveDisp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_alignTop="@+id/textView2"
-        android:layout_marginStart="13dp"
-        android:layout_toEndOf="@+id/textView2"
-        android:text="TextView"
-        android:textSize="16sp" />
+        android:layout_centerHorizontal="true"
+        android:text="Class List"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <ListView
         android:id="@+id/students"
@@ -34,20 +23,23 @@
         android:layout_below="@+id/textView2" />
 
     <Button
-        android:id="@+id/add"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/students"
-        android:layout_marginTop="19dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="25dp"
         android:text="Add Student" />
 
     <Button
-        android:id="@+id/remove"
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/add"
-        android:layout_alignBottom="@+id/add"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="13dp"
         android:text="Remove Student" />

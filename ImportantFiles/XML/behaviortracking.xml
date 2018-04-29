@@ -140,7 +140,7 @@
         app:layout_constraintTop_toBottomOf="@+id/adminButton" />
 
     <Button
-        android:id="@+id/add"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="1dp"
@@ -167,20 +167,34 @@
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/studentDisp" />
 
-    <TextView
+    <EditText
         android:id="@+id/additional"
         android:layout_width="342dp"
-        android:layout_height="99dp"
+        android:layout_height="57dp"
         android:layout_marginBottom="11dp"
-        android:layout_marginEnd="128dp"
-        android:layout_marginStart="131dp"
-        android:layout_marginTop="288dp"
         android:text="Additional Comments ..."
-        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/adminButton" />
+        app:layout_constraintTop_toBottomOf="@+id/action"
+        app:layout_constraintVertical_bias="0.16" />
 
+    <EditText
+        android:id="@+id/action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Action Taken"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/peersButton" />
 
 
 </android.support.constraint.ConstraintLayout>
