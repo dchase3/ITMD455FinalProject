@@ -5,6 +5,7 @@
     android:id="@+id/relativeLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1e1e1e"
     tools:layout_editor_absoluteY="81dp">
 
     <TextView
@@ -14,6 +15,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:textColor="#00b0ca"
         android:text="Student Name"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,6 +29,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:textColor="#00b0ca"
         android:text="Behavior Name:"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         app:layout_constraintEnd_toStartOf="@+id/studentDisp"
@@ -38,6 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:textColor="#00b0ca"
         android:layout_marginTop="8dp"
         android:text="Location"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
@@ -60,6 +64,8 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:text="Classroom"
+            android:textColor="#00b0ca"
+            android:backgroundTint="#00b0ca"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -70,6 +76,8 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:text="Hallway"
+            android:textColor="#00b0ca"
+            android:backgroundTint="#00b0ca"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioButton" />
 
@@ -80,6 +88,8 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:text="Bus"
+            android:textColor="#00b0ca"
+            android:backgroundTint="#00b0ca"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
 
@@ -88,6 +98,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
+            android:textColor="#00b0ca"
+            android:backgroundTint="#00b0ca"
             android:layout_marginTop="8dp"
             android:text="Cafeteria"
             app:layout_constraintStart_toStartOf="parent"
@@ -102,6 +114,7 @@
         android:layout_marginStart="59dp"
         android:layout_marginTop="16dp"
         android:text="Witness"
+        android:textColor="#00b0ca"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         app:layout_constraintBottom_toTopOf="@+id/teacherButton"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,6 +127,8 @@
         android:layout_marginStart="60dp"
         android:layout_marginTop="13dp"
         android:text="Teacher"
+        android:textColor="#00b0ca"
+        android:backgroundTint="#00b0ca"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -123,6 +138,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
         android:layout_marginStart="60dp"
+        android:textColor="#00b0ca"
+        android:backgroundTint="#00b0ca"
         android:layout_marginTop="12dp"
         android:text="Administration"
         app:layout_constraintBottom_toTopOf="@+id/peersButton"
@@ -134,6 +151,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
+        android:textColor="#00b0ca"
+        android:backgroundTint="#00b0ca"
         android:layout_marginTop="15dp"
         android:text="Peers"
         app:layout_constraintStart_toStartOf="parent"
@@ -147,6 +166,8 @@
         android:layout_marginStart="118dp"
         android:layout_marginTop="90dp"
         android:text="Add Behavior"
+        android:background="#00b0ca"
+        android:textColor="#1e1e1e"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/peersButton"
         app:layout_constraintTop_toBottomOf="@+id/action" />
@@ -159,6 +180,7 @@
         android:layout_marginBottom="168dp"
         android:layout_marginEnd="31dp"
         android:layout_marginStart="83dp"
+        android:textColor="#00b0ca"
         android:layout_marginTop="9dp"
         android:hint="Select Date"
         android:textSize="30dp"
@@ -174,6 +196,7 @@
         android:layout_marginBottom="5dp"
         android:layout_marginTop="9dp"
         android:text="Additional Comments ..."
+        android:textColor="#00b0ca"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -190,6 +213,7 @@
         android:layout_marginStart="19dp"
         android:layout_marginTop="17dp"
         android:ems="10"
+        android:textColor="#00b0ca"
         android:inputType="textPersonName"
         android:text="Action Taken"
         app:layout_constraintBottom_toTopOf="@+id/adminButton"

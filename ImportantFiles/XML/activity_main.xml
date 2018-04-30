@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1e1e1e"
     tools:context="com.example.raiven.itmd455final.MainActivity">
 
 
@@ -30,6 +31,7 @@
         android:layout_marginStart="216dp"
         android:layout_marginTop="5dp"
         android:text="LOGIN"
+        android:textColor="#00b0ca"
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -47,6 +49,7 @@
         android:layout_marginTop="92dp"
         android:ems="10"
         android:hint="Username"
+        android:textColor="#00b0ca"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,6 +65,7 @@
         android:layout_marginTop="35dp"
         android:ems="10"
         android:hint="Password"
+        android:textColor="#00b0ca"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/badbehavior"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,6 +80,8 @@
         android:layout_marginStart="225dp"
         android:layout_marginTop="42dp"
         android:text="SUBMIT"
+        android:background="#00b0ca"
+        android:textColor="#1e1e1e"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
