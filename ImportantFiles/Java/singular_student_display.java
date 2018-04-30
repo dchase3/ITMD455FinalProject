@@ -19,7 +19,6 @@ public class singular_student_display extends Activity {
     TextView name;
     Button good;
     Button bad;
-    Button stats;
     int sid;
     ArrayList<behavior> behaviors= new ArrayList<behavior>();
 
@@ -61,15 +60,6 @@ public class singular_student_display extends Activity {
             }
         });
 
-/*        stats.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), stats.class);
-                intent.putExtra("name", name.getText());
-                intent.putExtra("id", sid);
-                startActivity(intent);
-            }
-        });
-*/
         behaviors=db.getStudentBehaviors(sid);
         List<HashMap<String,String>> aList = new ArrayList<HashMap<String,String>>();
 

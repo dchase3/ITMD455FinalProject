@@ -80,25 +80,6 @@ public class delete_display extends Activity {
             }
         });
 
-        //leads to screen to add a new student
-        add = (Button)findViewById(R.id.button2);
-        add.setOnClickListener(new View.OnClickListener(){
-            @Override public void onClick(View v) {
-
-                Intent i = new Intent(getApplicationContext(), add_student.class);
-                startActivity(i);
-            }
-        });
-
-        remove = (Button)findViewById(R.id.button3);
-        remove.setOnClickListener(new View.OnClickListener(){
-            @Override public void onClick(View v) {
-
-                Intent i = new Intent(getApplicationContext(), add_student.class);
-                startActivity(i);
-            }
-        });
-
 
     }
 }
