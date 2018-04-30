@@ -27,7 +27,6 @@ This documentation contains all source code, layout screens and snapshots of the
   - [add_student](#add_student.java)
   - [behaviors](#behaviors.java)
   - [delete_display](#delete_display.java)
-  - [stats](#stats.java)
 - [XML Code](#xml-code)
   - [activity_main](#activity_main.xml)
   - [add_student](#add_student.xml)
@@ -1452,43 +1451,6 @@ public class delete_display extends Activity {
 }
 ```
 
-### stats.java
-
-```java
-package com.example.raiven.itmd455final;
-
-import android.app.Activity;
-import android.os.Bundle;
-/*
-import com.jjoe64.graphview.GraphView;
-import com.jjoe64.graphview.series.DataPoint;
-import com.jjoe64.graphview.series.LineGraphSeries;
-
-/**
- * Created by Raiven on 4/29/2018.
- */
-
-public class stats extends Activity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.stats);
-
-/*
-        GraphView graph = (GraphView) findViewById(R.id.graph);
-        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[]{
-                new DataPoint(0, 1),
-                new DataPoint(1, 5),
-                new DataPoint(2, 3)
-        });
-        graph.addSeries(series);
-*/
-    }
-
-}
-```
-
 
 
 ## XML Code
@@ -2627,3 +2589,27 @@ Includes the XML files and code as well as screenshots of layout files.
 
 
 ## Screenshots
+
+![add1]
+(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/add1.png)
+
+![bad1]
+(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/bad1.png)
+
+![good1]
+(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/good1.png)
+
+![login1]
+(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/login1.png)
+
+![remove1]
+(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/remove1.png)
+
+![screen1]
+(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/screen1.png)
+
+![student1]
+(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/student1.png)
+
+![track1]
+(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/track1.png)
