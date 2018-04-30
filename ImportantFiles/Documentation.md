@@ -2591,25 +2591,25 @@ Includes the XML files and code as well as screenshots of layout files.
 ## Screenshots
 
 ![add1]
-(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/add1.png)
+(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/add1.PNG)
 
 ![bad1]
-(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/bad1.png)
+(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/bad1.PNG)
 
 ![good1]
-(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/good1.png)
+(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/good1.PNG)
 
 ![login1]
-(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/login1.png)
+(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/login1.PNG)
 
 ![remove1]
-(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/remove1.png)
+(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/remove1.PNG)
 
 ![screen1]
-(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/screen1.png)
+(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/screen1.PNG)
 
 ![student1]
-(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/student1.png)
+(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/student1.PNG)
 
 ![track1]
-(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/track1.png)
+(https://github.com/dchase3/ITMD455FinalProject/blob/master/ImportantFiles/Images/track1.PNG)
